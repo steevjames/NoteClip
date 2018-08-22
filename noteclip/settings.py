@@ -25,7 +25,7 @@ SECRET_KEY = '4f+9xc9w(56x+)^@8zq6tclj+43-gsi1=^h3*@s!bq%1q6k7-s'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['noteclip.herokuapp.com']
 
 
 # Application definition
