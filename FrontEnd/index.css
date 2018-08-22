@@ -1,0 +1,118 @@
+body{
+    margin:0;
+}
+.intro{
+    background-image:url('1.jpg');
+    background-size:cover;
+}
+.overlay{
+    background-color:rgba(0,0,0,.3);
+    height:100vh;
+}
+.navbar{
+    color: white;
+    background-color:rgba(0,0,0,.3);
+    padding:30px;
+    font-size: 30px;
+    font-family: verdana;
+    box-shadow: 0px 5px 21px -5px rgba(255,255,255,1);
+}
+.mainpagedesc{
+    color:white;
+    font-size:25px;
+    padding:30px;
+    position: absolute;
+    top: 50%;
+    left:0;
+    right:0;
+    text-align: center;
+    transform: translateY(-50%);
+    white-space: nowrap;
+    text-shadow: 2px 2px 5px #000;
+}
+
+.button1 {
+	-moz-box-shadow: 0px 10px 25px -5px #3dc21b;
+	-webkit-box-shadow: 0px 10px 25px -5px #3dc21b;
+	box-shadow: 0px 10px 25px -5px #3dc21b;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #44c767), color-stop(1, #5cbf2a));
+	background:-moz-linear-gradient(top, #44c767 5%, #5cbf2a 100%);
+	background:-webkit-linear-gradient(top, #44c767 5%, #5cbf2a 100%);
+	background:-o-linear-gradient(top, #44c767 5%, #5cbf2a 100%);
+	background:-ms-linear-gradient(top, #44c767 5%, #5cbf2a 100%);
+	background:linear-gradient(to bottom, #44c767 5%, #5cbf2a 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#44c767', endColorstr='#5cbf2a',GradientType=0);
+	background-color:#44c767;
+	-moz-border-radius:31px;
+	-webkit-border-radius:31px;
+	border-radius:31px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:16px;
+	font-weight:bold;
+	padding:17px 33px;
+	text-decoration:none;
+    text-shadow:0px 1px 0px #2f6627;
+    margin:20px;
+}
+.button1:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #5cbf2a), color-stop(1, #44c767));
+	background:-moz-linear-gradient(top, #5cbf2a 5%, #44c767 100%);
+	background:-webkit-linear-gradient(top, #5cbf2a 5%, #44c767 100%);
+	background:-o-linear-gradient(top, #5cbf2a 5%, #44c767 100%);
+	background:-ms-linear-gradient(top, #5cbf2a 5%, #44c767 100%);
+	background:linear-gradient(to bottom, #5cbf2a 5%, #44c767 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5cbf2a', endColorstr='#44c767',GradientType=0);
+	background-color:#5cbf2a;
+}
+.button1:active {
+	position:relative;
+	top:1px;
+}
+
+.button2 {
+	-moz-box-shadow: 0px 10px 25px -5px #b300fa;
+	-webkit-box-shadow: 0px 10px 25px -5px #b300fa;
+	box-shadow: 0px 10px 25px -5px #b300fa;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #b600e3), color-stop(1, #a60064));
+	background:-moz-linear-gradient(top, #b600e3 5%, #a60064 100%);
+	background:-webkit-linear-gradient(top, #b600e3 5%, #a60064 100%);
+	background:-o-linear-gradient(top, #b600e3 5%, #a60064 100%);
+	background:-ms-linear-gradient(top, #b600e3 5%, #a60064 100%);
+	background:linear-gradient(to bottom, #b600e3 5%, #a60064 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#b600e3', endColorstr='#a60064',GradientType=0);
+	background-color:#b600e3;
+	-moz-border-radius:31px;
+	-webkit-border-radius:31px;
+	border-radius:31px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:16px;
+	font-weight:bold;
+	padding:17px 33px;
+	text-decoration:none;
+    text-shadow:0px 1px 0px #000000;
+    margin:20px;
+}
+.button2:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #a60064), color-stop(1, #b600e3));
+	background:-moz-linear-gradient(top, #a60064 5%, #b600e3 100%);
+	background:-webkit-linear-gradient(top, #a60064 5%, #b600e3 100%);
+	background:-o-linear-gradient(top, #a60064 5%, #b600e3 100%);
+	background:-ms-linear-gradient(top, #a60064 5%, #b600e3 100%);
+	background:linear-gradient(to bottom, #a60064 5%, #b600e3 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#a60064', endColorstr='#b600e3',GradientType=0);
+	background-color:#a60064;
+}
+.button2:active {
+	position:relative;
+	top:1px;
+}
+
+        
