@@ -1,68 +1,74 @@
 body{
 	margin:0;
-	font-family: Courier, monospace;
+	font-family: palatino, monospace;
 }
+*{
+	box-sizing: border-box;
+}
+
+
 .intro{
     background-image:url('1.jpg');
 	background-size:cover;
 	background-attachment: fixed;
 	margin: 15px;
-	margin-bottom: 0;
 }
 .overlay{
     background-color:rgba(0,0,0,.4);
-    height:100vh;
 }
 .navbar{
     color: #666;
     background-color:rgba(255,255,255,1);
-    padding:30px;
     font-size: 30px;
     font-family: verdana;
-    box-shadow: 0px 8px 36px -7px rgba(0,0,0,0.75);
+	box-shadow: 0px 8px 36px -7px rgba(0,0,0,0.75);
+	padding:30px;
+	height:100px;
 }
 .mainpagedesc{
     color:white;
     font-size:40px;
     padding:30px;
-    position: relative;
-    padding-top:45%;
-    text-align: center;
-    transform: translateY(-50%);
-    /* text-shadow: 2px 2px 5px #fff; */
+	text-align: center;
+	background-color: rgba(119, 119, 255,1);
+    height: calc( 100vh - 130px );
 }
 
+
 .button1 {
-	box-shadow: 0px 10px 25px -5px #3dc21b;
-	background:linear-gradient(to bottom, #44c767 5%, #5cbf2a 100%);
 	background-color:#44c767;
+	/* border-radius:28px; */
+	border:1px solid #18ab29;
+	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
 	font-family:Arial;
-	font-size:16px;
-	padding:15px 30px;
+	font-size:17px;
+	padding:16px 31px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #2f6627;
-	white-space: nowrap;
 	margin: 20px;
 	border:0;
 	margin-top:30px;
-
 }
 .button1:hover {
-	background:linear-gradient(to bottom, #5cbf2a 5%, #44c767 100%);
 	background-color:#5cbf2a;
 }
 .button1:active {
 	position:relative;
 	top:1px;
 }
-
-
-.content1{
-	height:33vh;
-	background-color:#7f7;
-	color:white;
+.center{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%)
 }
 
-        
+@media only screen and (max-width: 600px) {
+    .mainpagedesc {
+        font-size:20px;
+	}
+	.button1 {
+        transform: scale(.8);
+    }
+}
