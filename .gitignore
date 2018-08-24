@@ -1,0 +1,4 @@
+#git update-index --assume-unchanged db.sqlite3
+#// track changes again :
+#git update-index --no-assume-unchanged db.sqlite3
+#
