@@ -27,5 +27,5 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('test', TemplateView.as_view(template_name='home.html'), name="home"),
     path('notes', views.notes),
-    path('delete/<username>', views.del_user),
+    path('delete/<username>', views.deleteuser),
 ]
