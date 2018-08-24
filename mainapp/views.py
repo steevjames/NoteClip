@@ -8,23 +8,22 @@ import os
 def index(request):
     return render(request, 'index.html', {})
 
-def test(request):
+def login(request):
     return render(request, 'home.html', {})
 
 def notes(request):
     return render(request, 'notes.html', {})
 
-def deleteuser(request, username):    
+def deleteuser(request):    
     try:
-        if request.user.username==username:
-            u = User.objects.get(username = username)
+        if request.user.username==request.GET['uname']:
+            u = User.objects.get(username = request.user.username)
             u.delete()
             return HttpResponse("User Has Been Deleted")         
         else: 
-            try:
-                HOSTNAME = socket.gethostname()
-            except:
-                HOSTNAME = 'localhost'
             return HttpResponseRedirect("..") 
     except : 
         return HttpResponse("An Error Occured !")
+
+def deleteaccount(request):
+    return render(request, 'deleteaccount.html', {})

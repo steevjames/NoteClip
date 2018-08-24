@@ -18,6 +18,7 @@ These are your Notes
 {% if user.is_authenticated %}
 {{ user.username }}!
 <p><a href="{% url 'logout' %}">logout</a></p>
+<p><a href="deleteaccount">Delete Account</a></p>
 {% else %}
 <p>You are not logged in</p>
 <a href="{% url 'login' %}">login</a>

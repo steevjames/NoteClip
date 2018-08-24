@@ -6,8 +6,13 @@
 {% if user.is_authenticated %}
   Hi {{ user.username }}!
   <p><a href="{% url 'logout' %}">logout</a></p>
+
+  <a href="deleteaccount">Delete Account</a>
 {% else %}
   <p>You are not logged in</p>
   <a href="{% url 'login' %}">login</a>
+  <br>
+  <br>
+  <a href="accounts/signup">Sign Up</a>
 {% endif %}
 {% endblock %}
