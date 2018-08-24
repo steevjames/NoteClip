@@ -123,3 +123,5 @@ STATICFILES_DIRS= [
     'static'
     ]
 LOGIN_REDIRECT_URL = '/test'
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
