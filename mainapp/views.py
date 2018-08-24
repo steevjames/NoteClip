@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.contrib.auth.models import User
 
 # Create your views here.
 
@@ -11,3 +12,20 @@ def test(request):
 
 def notes(request):
     return render(request, 'notes.html', {})
+
+def del_user(request, username):    
+    try:
+        # u = User.objects.get(username = username)
+        # u.delete()
+        if request.user.username==username:
+            u = User.objects.get(username = username)
+            u.delete()
+            return HttpResponse("response");           
+
+    except User.DoesNotExist:
+        return render(request, "User doesnot exist")    
+
+    except Exception as e: 
+        return render(request, "expception")
+
+    return render(request, 'front.html') 
