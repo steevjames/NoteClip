@@ -22,7 +22,8 @@
 
 
           {% if user.is_authenticated %}
-          <form action="delete" method="get">
+          <form action="delete" method="post">
+              {% csrf_token %}
             Enter Your Username To Confirm : <input type="text" name="uname"><br>
             <input type="submit" value="Submit">
           </form>

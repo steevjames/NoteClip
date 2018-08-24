@@ -16,7 +16,7 @@ def notes(request):
 
 def deleteuser(request):    
     try:
-        if request.user.username==request.GET['uname']:
+        if request.user.username==request.POST['uname']:
             u = User.objects.get(username = request.user.username)
             u.delete()
             return HttpResponse("User Has Been Deleted")         
