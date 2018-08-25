@@ -35,7 +35,8 @@ def deleteaccount(request):
 
 def deletenote(request):
     uid=request.GET['id']
-    Note.objects.filter(id=uid).delete()
+    if Note.objects.filter(id=uid)[0].owner== request.user.username:
+        Note.objects.filter(id=uid)[0].delete()
     return HttpResponseRedirect("notes") 
 
 def receive(request):
