@@ -18,11 +18,13 @@ These are your Notes
 {% if user.is_authenticated %}
 {{ user.username }}!
 
-<br><br>
+<br><br><hr>
 {% for obj in Jkk %}
     {% cycle 'row1' 'row2' as rowcolors silent %}
     Title : {{obj.title}} <br>
     Content : {{obj.content}}<br>
+    Id : {{obj.id}}<br>
+    <hr>
 {% endfor %}
 <br><br>
 
