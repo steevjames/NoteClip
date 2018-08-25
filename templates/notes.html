@@ -14,9 +14,8 @@
 
 <body>
 
-These are your Notes 
 {% if user.is_authenticated %}
-{{ user.username }} !
+These are your Notes {{ user.username }} !
 
 <br><br><hr>
 {% for obj in Jkk %}

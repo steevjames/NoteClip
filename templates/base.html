@@ -2,13 +2,26 @@
 <!DOCTYPE html>
 <html>
 <head>
+    {% load static %}
   <meta charset="utf-8">
   <title>{% block title %}Django Auth Tutorial{% endblock %}</title>
+  <link rel="stylesheet" href="{% static '/css/base.css' %}">
 </head>
 <body>
-  <main>
-    {% block content %}
-    {% endblock %}
-  </main>
+
+
+  <div class="intro">
+    <div class="overlay">
+      <div class="navbar">
+        NoteClip
+      </div>
+      <div class="mainpagedesc">
+        {% block content %}
+        {% endblock %}
+      </div>
+    </div>
+  </div>
+
+
 </body>
 </html>

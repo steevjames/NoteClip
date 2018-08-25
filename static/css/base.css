@@ -8,7 +8,7 @@ body{
 
 
 .intro{
-    background-image:url('1.jpg');
+    /* background-image:url('1.jpg'); */
 	background-size:cover;
 	background-attachment: fixed;
 	margin: 15px;
@@ -35,9 +35,6 @@ body{
     height: calc( 100vh - 140px );
 }
 
-.trustedby{
-	font-size:20px;
-}
 
 .button1 {
 	background-color:#44c767;
@@ -51,7 +48,7 @@ body{
 	padding:16px 31px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #2f6627;
-	margin: 20px;
+	margin: 10px;
 	border:0;
 }
 .button1:hover {
@@ -61,15 +58,19 @@ body{
 	position:relative;
 	top:1px;
 }
-.center{
-	position: relative;
-	top: 50%;
-	transform: translateY(-50%)
+
+
+a{
+	text-decoration: none;
+	color:inherit;
+}
+.smalltext{
+	font-size: 70%;
 }
 
 @media only screen and (max-width: 600px) {
     .mainpagedesc {
-        font-size:20px;
+        font-size:25px;
 	}
 	.button1 {
         transform: scale(.8);
@@ -77,4 +78,23 @@ body{
 	.trustedby{
 		font-size:13px;
 	}
+}
+hr {
+	border: 0;
+	border-top: 1px solid #8c8c8c;
+	border-bottom: 1px solid #fff;
+  }
+
+
+input {
+	padding: 5px;
+	font-size: 15px;
+	border-width: 1px;
+	border-color: #000000;
+	background-color: #ffffff;
+	color: #000000;
+	border-style: solid;
+}
+input:focus {
+	outline:none;
 }
