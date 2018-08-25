@@ -13,7 +13,7 @@ def login(request):
     return render(request, 'home.html', {})
 
 def notes(request):
-    return render(request, 'notes.html', {'Jkk':Note.objects.all()})
+    return render(request, 'notes.html', {'Jkk':Note.objects.filter(owner=request.user.username)})
 
 def addnew(request):
     return render(request, 'addnew.html', {})

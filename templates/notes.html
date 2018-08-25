@@ -16,15 +16,17 @@
 
 These are your Notes 
 {% if user.is_authenticated %}
-{{ user.username }}!
+{{ user.username }} !
 
 <br><br><hr>
 {% for obj in Jkk %}
+{% if user.is_authenticated %}
     <!-- {% cycle 'row1' 'row2' as rowcolors silent %} -->
     Title : {{obj.title}} <br>
     Content : {{obj.content}}<br>
     Id : {{obj.id}}<br>
     <hr>
+  {% endif %}
 {% endfor %}
 <br><br>
 
