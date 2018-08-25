@@ -38,4 +38,4 @@ def receive(request):
     content = request.GET['content']
     p = Note(owner=username, title=title, content=content)
     p.save()
-    return HttpResponse("Done") 
+    return HttpResponseRedirect("notes") 

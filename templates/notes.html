@@ -18,17 +18,19 @@ These are your Notes
 {% if user.is_authenticated %}
 {{ user.username }}!
 
-
+<br><br>
 {% for obj in Jkk %}
     {% cycle 'row1' 'row2' as rowcolors silent %}
-    {{obj.title}}
+    Title : {{obj.title}} <br>
+    Content : {{obj.content}}<br>
 {% endfor %}
-
+<br><br>
 
 
 
 <p><a href="{% url 'logout' %}">logout</a></p>
 <p><a href="deleteaccount">Delete Account</a></p>
+<p><a href="addnew">Add Note</a></p>
 {% else %}
 <p>You are not logged in</p>
 <a href="{% url 'login' %}">login</a>
