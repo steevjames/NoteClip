@@ -40,9 +40,12 @@ def deletenote(request):
     return HttpResponseRedirect("notes") 
 
 def receive(request):
-    username = request.user.username
-    title = request.GET['title']
-    content = request.GET['content']
-    p = Note(owner=username, title=title, content=content)
-    p.save()
+    try:
+        username = request.user.username
+        title = request.GET['title']
+        content = request.GET['content']
+        p = Note(owner=username, title=title, content=content)
+        p.save()
+    except:
+        pass
     return HttpResponseRedirect("notes") 
