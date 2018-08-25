@@ -29,4 +29,6 @@ urlpatterns = [
     path('notes', views.notes),
     path('delete', views.deleteuser),
     path('deleteaccount', views.deleteaccount),
+    path('addnew', views.addnew),
+    path('receive', views.receive),
 ]

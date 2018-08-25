@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    {% load static %}
+
+  <title>NoteClip</title>
+  <meta name="viewport" content="width = device-width, initial-scale = 1">
+  <link rel="stylesheet" href="{% static '/css/index.css' %}">
+
+
+</head>
+
+<body>
+
+<form method="get" action="receive">
+Title :<input type="text" name="title"/><br>
+Content :<input type="text" name="content"/><br>
+<input type="submit" value="submit"/>
+  </form>
+
+</body>
+
+</html>

@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth.models import User
 import os
+from mainapp.models import Note
 
 # Create your views here.
 
@@ -12,7 +13,10 @@ def login(request):
     return render(request, 'home.html', {})
 
 def notes(request):
-    return render(request, 'notes.html', {})
+    return render(request, 'notes.html', {'Jkk':Note.objects.all()})
+
+def addnew(request):
+    return render(request, 'addnew.html', {})
 
 def deleteuser(request):    
     try:
@@ -27,3 +31,11 @@ def deleteuser(request):
 
 def deleteaccount(request):
     return render(request, 'deleteaccount.html', {})
+
+def receive(request):
+    username = request.user.username
+    title = request.GET['title']
+    content = request.GET['content']
+    p = Note(owner=username, title=title, content=content)
+    p.save()
+    return HttpResponse("Done") 
