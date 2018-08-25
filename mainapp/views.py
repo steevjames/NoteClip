@@ -23,6 +23,7 @@ def deleteuser(request):
         if request.user.username==request.POST['uname']:
             u = User.objects.get(username = request.user.username)
             u.delete()
+            Note.objects.filter(owner=request.user.username).delete()
             return HttpResponse("User Has Been Deleted")         
         else: 
             return HttpResponseRedirect("..") 
@@ -31,6 +32,11 @@ def deleteuser(request):
 
 def deleteaccount(request):
     return render(request, 'deleteaccount.html', {})
+
+def deletenote(request):
+    uid=request.GET['id']
+    Note.objects.filter(id=uid).delete()
+    return HttpResponseRedirect("notes") 
 
 def receive(request):
     username = request.user.username

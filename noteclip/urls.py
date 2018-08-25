@@ -31,4 +31,5 @@ urlpatterns = [
     path('deleteaccount', views.deleteaccount),
     path('addnew', views.addnew),
     path('receive', views.receive),
+    path('deletenote', views.deletenote),
 ]
