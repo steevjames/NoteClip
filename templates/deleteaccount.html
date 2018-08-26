@@ -7,7 +7,7 @@
 
   <title>NoteClip</title>
   <meta name="viewport" content="width = device-width, initial-scale = 1">
-  <link rel="stylesheet" href="{% static '/css/index.css' %}">
+  <link rel="stylesheet" href="{% static '/css/base.css' %}">
 
 
 </head>
@@ -19,19 +19,21 @@
       <div class="navbar">
         NoteClip
       </div>
+      <div class="mainpagedesc">
 
 
           {% if user.is_authenticated %}
           <form action="delete" method="post">
               {% csrf_token %}
-            Enter Your Username To Confirm : <input type="text" name="uname"><br>
-            <input type="submit" value="Submit">
+            <div class="smalltext">Enter Your Username To Confirm : </div>
+            <input type="text" name="uname"><br>
+            <input class="button1" type="submit" value="Submit"/>
           </form>
           {% else %}
           Log In First
           {% endif %}
 
-
+          </div>
         </div>
       </div>
 

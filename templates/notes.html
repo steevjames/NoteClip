@@ -14,42 +14,50 @@
 
 <body>
 
-    <div class="intro">
         <div class="overlay">
           <div class="navbar">
             NoteClip
           </div>
           <div class="mainpagedesc">
 
+
+
+
+
+              {% if user.is_authenticated %}
+              These are your Notes {{ user.username }} !
+              
+              <br><br><hr>
+              {% for obj in Jkk %}
+                  <!-- {% cycle 'row1' 'row2' as rowcolors silent %} -->
+                  <div class="note">
+                  <div class="title">{{obj.title}} </div>
+                  <div class="content">{{obj.content}}</div>
+                  <div class="deletenote"><a href="deletenote?id={{obj.id}}">Delete Note</a></div>
+                  </div>
+              {% endfor %}
+
+              
+              <div class="buttoncontainer">
+                  <a href="addnew"> <div class="button1 left">Add Note</div></a>
+                  <a href="{% url 'logout' %}"><div class="button1 right">Logout</div></a>
+                  <a href="deleteaccount"><div class="button1 deletebutton">Delete Account</div></a>
+              </div>
+              
+
+
+              {% else %}
+              <p>You are not logged in</p>
+              <a href="{% url 'login' %}"><button class="button1">Login</button></a>
+              {% endif %}
+
+
+
+
+
+
           </div>
         </div>
-      </div>
-
-{% if user.is_authenticated %}
-These are your Notes {{ user.username }} !
-
-<br><br><hr>
-{% for obj in Jkk %}
-{% if user.is_authenticated %}
-    <!-- {% cycle 'row1' 'row2' as rowcolors silent %} -->
-    Title : {{obj.title}} <br>
-    Content : {{obj.content}}<br>
-    <a href="deletenote?id={{obj.id}}">Delete Note</a>
-    <hr>
-  {% endif %}
-{% endfor %}
-<br><br>
-
-
-
-<p><a href="{% url 'logout' %}">logout</a></p>
-<p><a href="deleteaccount">Delete Account</a></p>
-<p><a href="addnew">Add Note</a></p>
-{% else %}
-<p>You are not logged in</p>
-<a href="{% url 'login' %}">login</a>
-{% endif %}
-
 
 
 </body>

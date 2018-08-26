@@ -7,18 +7,34 @@
 
   <title>NoteClip</title>
   <meta name="viewport" content="width = device-width, initial-scale = 1">
-  <link rel="stylesheet" href="{% static '/css/index.css' %}">
+  <link rel="stylesheet" href="{% static '/css/base.css' %}">
 
 
 </head>
 
 <body>
+    <div class="intro">
+    <div class="overlay">
+        <div class="navbar">
+          NoteClip
+        </div>
+        <div class="mainpagedesc">
 
+
+<div class="smalltext">
 <form method="get" action="receive">
-Title :<input type="text" name="title"/><br>
-Content :<input type="text" name="content"/><br>
-<input type="submit" value="submit"/>
+Title :<input type="text" name="title"/><br><br>
+Content :<br><input class="bigbox" type="text" name="content"/><br>
+<input class="button1" type="submit" value="submit"/>
+<br>
   </form>
+  </div>
+
+
+</div>
+</div>
+</div>
+
 
 </body>
 

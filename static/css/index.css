@@ -8,7 +8,7 @@ body{
 
 
 .intro{
-    background-image:url('1.jpg');
+    /* background-image:url('1.jpg'); */
 	background-size:cover;
 	background-attachment: fixed;
 	margin: 15px;
@@ -25,6 +25,7 @@ body{
 	padding:30px;
 	height:100px;
 	margin-bottom:10px;
+	text-align: center;
 }
 .mainpagedesc{
     color:white;
