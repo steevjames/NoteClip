@@ -7,12 +7,23 @@
 
   <title>NoteClip</title>
   <meta name="viewport" content="width = device-width, initial-scale = 1">
-  <link rel="stylesheet" href="{% static '/css/index.css' %}">
+  <link rel="stylesheet" href="{% static '/css/notes.css' %}">
 
 
 </head>
 
 <body>
+
+    <div class="intro">
+        <div class="overlay">
+          <div class="navbar">
+            NoteClip
+          </div>
+          <div class="mainpagedesc">
+
+          </div>
+        </div>
+      </div>
 
 {% if user.is_authenticated %}
 These are your Notes {{ user.username }} !
