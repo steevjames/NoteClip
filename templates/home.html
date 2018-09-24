@@ -5,13 +5,7 @@
 {% block content %}
 {% if user.is_authenticated %}
   Hi {{ user.username }}!
-  <p><a href="notes"><button class="button1">Go to Notes</button></a></p>
-  <p><a href="notes"><button class="button1">Go to Main Page</button></a></p>
-  <p><a href="{% url 'logout' %}"><button class="button1">Logout</button></a></p>
-  <a href="deleteaccount"><button class="button1">Delete Account</button></a>
-  <script type="text/javascript">
-    window.location.href = 'notes';
-    </script>
+  <meta http-equiv="REFRESH" content="0;url=notes">
 {% else %}
   <p>You are not logged in</p>
   <a href="{% url 'login' %}"><button class="button1">Login</button></a>
