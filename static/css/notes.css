@@ -4,9 +4,13 @@ body{
 }
 *{
 	box-sizing: border-box;
+	font-family: 'dfont';
 }
 
-
+@font-face {
+	font-family: "dfont";
+	src: url(../dfont.ttf);
+}
 
 .overlay{
 	background-color:rgba(0,0,0,.8);
@@ -66,8 +70,8 @@ a{
 
 hr {
 	border: 0;
-	border-top: 1px solid #8c8c8c;
-	border-bottom: 1px solid #fff;
+	border-top: 1px solid #afa;
+	/* border-bottom: 1px solid #fff; */
 	width:70%;
   }
 .note{
@@ -80,8 +84,10 @@ hr {
 	overflow: hidden;
 }
 .title{
+	text-transform: capitalize;
 	font-size:140%;
-	background-color: #ccc;
+	background-color: #ececec;
+	color:#222;
 	padding:10px;
 	margin-bottom:10px;
 }
@@ -106,8 +112,9 @@ hr {
 .deletenote{
 	padding-top:5px;
 	padding-bottom:5px;
+	border-top:1px solid #aaa;
 	color:#f22;
-	background-color:#ccc;
+	background-color:#eee;
 	font-size: 90%;
 }
 
